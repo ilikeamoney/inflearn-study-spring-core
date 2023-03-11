@@ -1,5 +1,8 @@
 package core.hello;
 
+import core.hello.member.MemberRepository;
+import core.hello.member.MemoryMemberRepository;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
@@ -28,7 +31,14 @@ import org.springframework.context.annotation.FilterType;
         excludeFilters= @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class)
         // 걸러낼 요소를 지정하는 방법.
 )
-public class AutoAppConfig {
 
+// 수동등록 빈과 자동등록 빈 중에서 이름에 중복이 발생하는경우
+// 수동등록 빈의 우선권을 같는다.
+public class AutoAppConfig {
+//
+//    @Bean(name = "memoryMemberRepository")
+//    MemberRepository memberRepository() {
+//        return new MemoryMemberRepository();
+//    }
 
 }
