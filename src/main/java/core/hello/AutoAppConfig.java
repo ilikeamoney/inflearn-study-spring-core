@@ -35,7 +35,7 @@ import org.springframework.context.annotation.FilterType;
 // 수동등록 빈과 자동등록 빈 중에서 이름에 중복이 발생하는경우
 // 수동등록 빈의 우선권을 같는다.
 public class AutoAppConfig {
-//
+
 //    @Bean(name = "memoryMemberRepository")
 //    MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
